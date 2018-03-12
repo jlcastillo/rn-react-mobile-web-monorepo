@@ -4,7 +4,7 @@ var Module = require('module');
 var originalRequire = Module.prototype.require;
 
 Module.prototype.require = function(modulePath) {
-    console.log(modulePath)
+    //console.log(modulePath)
     let ignoreHook = modulePath.indexOf("[IGNOREHOOK]") === 0;
     if(ignoreHook) {
         console.log("Ignoring hook for " + modulePath);

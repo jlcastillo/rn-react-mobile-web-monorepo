@@ -11,8 +11,7 @@
         "@components": "../common/components/mobile",
         "redux": "./node_modules/redux",
         "react": "./node_modules/react",
-        "react-redux": "./node_modules/react-redux",
-        "react-native": "./node_modules/react-native"
+        "react-redux": "./node_modules/react-redux"
       }
     }]    
   ]

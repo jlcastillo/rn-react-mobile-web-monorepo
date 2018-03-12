@@ -56,9 +56,38 @@ react-native run-android
 react-native run-ios
 ```
 
-# Troubleshooting
+# Deployment
+This project doesn't include a backend API server. The repo is ready to be pushed to Horoku/Dokku from its root and serve the web app.
 
-- If you see errors related to missing packages in the mobile project, make sure you have those as dependencies in /web/package.json and as aliases in /common/.babelrc.
+In order to manually deploy that, you need to bundle and serve it with any HTTP server (by default we use 'serve' npm package for that)
+
+```
+cd /
+npm run build
+npm start
+```
+
+If you need to deploy a backend API service, we recommend you to keep it as a separate repo, as anyway you won't benefit from code sharing (unless your clients share a lot of code with the server, but that's not usual).
+
+# Troubleshooting
+## Mobile
+
+- in order to add new modules to the mobile project, do the following:
+    ```
+    cd mobile
+    npm install --save <a-rn-package>
+    ```
+    then add to the plugins.alias section of  /mobile/.babelrc:
+    ```
+    "a-rn-package": "./node_modules/a-rn-package"
+    ```
+    to the plugins.alias section. After that, make sure you restart the bundler with
+    ```
+    npm start -- --reset-cache
+    ```
+
+
+- If you see errors related to missing packages in the mobile project, make sure you have those as dependencies in /mobile/package.json and as aliases in /mobile/.babelrc.
 
 - if you get red screen errors in the emulator, try stopping the bundler with CTRL/CMD-C and running it again with 'npm start -- --reset-cache', then reloading the app in the emulator by pressing key R twice (or using the Reload option in the red screen menu)
 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "cd web && npm run serve",
+    "start": "npm run build && cd web && npm run serve",
     "build": "cd common && npm install && cd ../web && npm install && npm run build && cd..",
     "test": "cd web && npm run test"
   },

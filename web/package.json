@@ -52,7 +52,8 @@
   "scripts": {
     "start": "node hook.js ./scripts/start.js",
     "build": "node hook.js ./scripts/build.js",
-    "test": "node hook.js ./scripts/test.js --env=jsdom"
+    "test": "node hook.js ./scripts/test.js --env=jsdom",
+    "serve": "node ./node_modules/serve/bin/serve.js -s build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

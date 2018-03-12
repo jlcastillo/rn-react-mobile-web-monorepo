@@ -1,0 +1,6 @@
+{
+  "babelrc": false,
+  "presets": [
+    "react-app", "es2015"
+  ]
+}

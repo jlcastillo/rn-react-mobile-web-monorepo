@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "babel-preset-react-native-stage-0/decorator-support"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-react-jsx-source",
+        ["babel-plugin-module-resolver", {
+          "root": ["."],
+          "alias": {
+            "@common": "../common",
+            "@components": "../common/components/mobile",
+            "redux": "./node_modules/redux",
+            "react": "./node_modules/react",
+            "react-redux": "./node_modules/react-redux",
+            "react-native": "./node_modules/react-native"
+          }
+        }]    
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "cd web && npm run start",
+    "build": "cd web && npm run build",
+    "test": "cd web && npm run test"
+  }
+}

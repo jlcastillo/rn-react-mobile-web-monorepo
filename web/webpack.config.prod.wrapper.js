@@ -1,4 +1,4 @@
-let config = require('[IGNOREHOOK]./config/webpack.config.prod');
+let config = require('[IGNOREHOOK]./node_modules/react-scripts/config/webpack.config.prod');
 
 const path = require('path');
 const fs = require('fs');

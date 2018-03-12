@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build && cd web && npm run serve",
-    "build": "cd common && npm install && cd ../web && npm install && npm run build && cd..",
+    "build": "cd common && npm install && cd ../web && npm install && npm run build && cd ..",
     "test": "cd web && npm run test"
   },
   "engines": {
